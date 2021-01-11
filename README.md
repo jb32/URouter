@@ -1,5 +1,6 @@
 # URouter
 
+![](https://img.shields.io/badge/language-swift-orange.svg) ![](https://img.shields.io/cocoapods/l/Lotusoot.svg?style=flat) ![]
 [![CI Status](https://img.shields.io/travis/1031721778@qq.com/URouter.svg?style=flat)](https://travis-ci.org/1031721778@qq.com/URouter)
 [![Version](https://img.shields.io/cocoapods/v/URouter.svg?style=flat)](https://cocoapods.org/pods/URouter)
 [![License](https://img.shields.io/cocoapods/l/URouter.svg?style=flat)](https://cocoapods.org/pods/URouter)
