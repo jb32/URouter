@@ -1,0 +1,6 @@
+framework module Pods_URouter_Tests {
+  umbrella header "Pods-URouter_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+PODS:
+  - ModuleA (0.0.1):
+    - URouter
+  - URouter (0.1.0)
+
+DEPENDENCIES:
+  - ModuleA (from `../ModuleA`)
+  - URouter (from `../`)
+
+EXTERNAL SOURCES:
+  ModuleA:
+    :path: "../ModuleA"
+  URouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ModuleA: b733ec6f6e511211b713ce8e74b5226673165a8d
+  URouter: 3c37f702457e3634a752d3230de2dac0d1410690
+
+PODFILE CHECKSUM: 5be6c9f106cbc082df430ca08ce44740493e058a
+
+COCOAPODS: 1.10.0

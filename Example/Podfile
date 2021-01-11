@@ -1,0 +1,24 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+workspace 'URouter.xcworkspace'
+
+target 'URouter_Example' do
+  pod 'URouter', :path => '../'
+  pod 'ModuleA', :path => '../ModuleA'
+
+  target 'URouter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
+
+target 'ModuleA' do
+  
+  project '../ModuleA/ModuleA.xcodeproj'
+  
+  pod 'URouter', :path => '../'
+  
+end

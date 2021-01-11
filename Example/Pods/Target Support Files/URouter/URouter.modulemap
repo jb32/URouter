@@ -1,0 +1,6 @@
+framework module URouter {
+  umbrella header "URouter-umbrella.h"
+
+  export *
+  module * { export * }
+}

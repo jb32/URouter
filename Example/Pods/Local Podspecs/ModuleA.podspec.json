@@ -1,0 +1,24 @@
+{
+  "name": "ModuleA",
+  "version": "0.0.1",
+  "summary": "一个模块例子",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "description": "一个模块例子一个模块例子一个模块例子一个模块例子一个模块例子",
+  "homepage": "http://u/ModuleA",
+  "license": "MIT",
+  "authors": {
+    "1031721778@qq.com": "yomingyo@gmail.com"
+  },
+  "source": {
+    "git": "http://u/ModuleA.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "ModuleA/Classes/**/*.swift",
+  "dependencies": {
+    "URouter": [
+
+    ]
+  }
+}
