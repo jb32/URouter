@@ -46,5 +46,6 @@ present("ModuleA.ViewController", params: 100)
 ```
 3. 参数回传
 ```Swift
-callback(_ params: Any)
+func dismiss(animated: Bool = true, params: Any? = nil)
+func pop(animated: Bool = true, params: Any? = nil)
 ```
