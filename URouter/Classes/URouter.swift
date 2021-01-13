@@ -32,12 +32,12 @@ public class URouter {
     /// - Parameters:
     ///   - params: 参数
     ///   - vc: 执行控制器
-    func callback(with params: Any?, from vc: UIViewController) {
+    func callback(with params: Any?, from claName: String) {
         
-        if let vc = URouter.share.routes["\(vc)"] {
+        if let vc = URouter.share.routes[claName] {
             let callback = vc.callback
             callback?(params)
-            URouter.share.routes["\(vc)"] = nil
+            URouter.share.routes[claName] = nil
         }
     }
 }
@@ -63,7 +63,7 @@ public extension UIViewController {
     ///   - params: 回调参数
     func dismiss(animated: Bool = true, params: Any? = nil) {
         dismiss(animated: animated, completion: nil)
-        URouter.share.callback(with: params, from: self)
+        URouter.share.callback(with: params, from: "\(self)")
     }
 }
 
@@ -77,7 +77,7 @@ public extension UINavigationController {
     func push(_ name: String, params: Any, animated: Bool = true, callback: ((Any) -> Void)? = nil) {
         guard let targetVC = URouter.share.getController(route: name, params: params) else { return }
         let opt = UOptions(name: name, callback: callback)
-        URouter.share.routes[name] = opt
+        URouter.share.routes["\(targetVC)"] = opt
         pushViewController(targetVC, animated: animated)
     }
     
@@ -86,7 +86,8 @@ public extension UINavigationController {
     ///   - animated: 动画
     ///   - params: 回调参数
     func pop(animated: Bool = true, params: Any? = nil) {
+        guard let topViewController = topViewController else { return }
         popViewController(animated: animated)
-        URouter.share.callback(with: params, from: self)
+        URouter.share.callback(with: params, from: "\(topViewController)")
     }
 }

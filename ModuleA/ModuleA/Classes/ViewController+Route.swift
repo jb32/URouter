@@ -10,8 +10,8 @@ import URouter
 
 extension ViewController: URouteType {
     
-    static func target(with params: Any) -> UIViewController {
-        print(params)
+    static func target(with params: Any?) -> UIViewController {
+        print(params as Any)
         return ViewController()
     }
 }

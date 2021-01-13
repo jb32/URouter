@@ -8,5 +8,5 @@
 import UIKit
 
 public protocol URouteType: UIViewController {
-    static func target(with params: Any) -> UIViewController
+    static func target(with params: Any?) -> UIViewController
 }
